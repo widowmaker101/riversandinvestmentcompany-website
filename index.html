@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riversand Investment Company - Secure Wealth Management</title>
+    <meta name="description" content="Professional investment services for sustainable growth. Tailored portfolios, expert advice.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1E3A8A;
+            --accent: #10B981;
+            --neutral: #F3F4F6;
+            --text: #111827;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); background: var(--neutral); }
+        header { background: var(--white); box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--primary); font-weight: 600; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .hero { background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)), url('https://source.unsplash.com/random/1920x1080/?finance,rivers') center/cover; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 0 2rem; margin-top: 60px; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
+        .btn { background: var(--accent); color: var(--white); padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: background 0.3s; }
+        .btn:hover { background: #059669; }
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        #about, #services { background: var(--white); }
+        #contact { background: var(--neutral); }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: var(--primary); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--neutral); padding: 2rem; border-radius: 0.5rem; text-align: center; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        form { display: grid; gap: 1rem; max-width: 600px; margin: 0 auto; }
+        input, textarea { padding: 1rem; border: 1px solid #D1D5DB; border-radius: 0.5rem; font-family: inherit; }
+        button { background: var(--primary); color: var(--white); padding: 1rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #1E40AF; }
+        footer { background: var(--primary); color: var(--white); text-align: center; padding: 2rem; }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; } nav ul { flex-direction: column; gap: 1rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="font-size: 1.5rem; color: var(--primary);">Riversand Investment</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h1>Navigate Wealth with Confidence</h1>
+            <p>At Riversand Investment Company, we blend strategic insight with steady growth—like a river carving its path.</p>
+            <a href="#services" class="btn">Explore Services</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Founded in 2020, Riversand Investment Company specializes in personalized wealth management. Our team of certified advisors helps clients achieve long-term financial security through diversified portfolios and risk-aware strategies. With a focus on sustainability and innovation, we're committed to your success.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Portfolio Management</h3>
+                <p>Tailored investment portfolios designed for your goals, balancing risk and reward.</p>
+            </div>
+            <div class="service-card">
+                <h3>Financial Planning</h3>
+                <p>Comprehensive retirement, estate, and tax planning to secure your future.</p>
+            </div>
+            <div class="service-card">
+                <h3>Advisory Consulting</h3>
+                <p>Expert guidance on market trends, mergers, and sustainable investing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p style="text-align: center; font-size: 0.9rem; margin-top: 1rem; color: #6B7280;">
+            Form not working? Get your free ID at <a href="https://formspree.io" target="_blank">formspree.io</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 Riversand Investment Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
