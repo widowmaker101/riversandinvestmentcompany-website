@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://widowmaker101.github.io/riversandinvestmentcompany-website/sitemap.xml
