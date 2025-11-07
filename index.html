@@ -1,13 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Core Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riversand Investment Company - Secure Wealth Management</title>
-    <meta name="description" content="Professional investment services for sustainable growth. Tailored portfolios, expert advice.">
+    <title>Riversand Investment Company | Wealth Management & Financial Advisory in Abuja, Nigeria</title>
+    <meta name="description" content="Riversand Investment Company offers personalized portfolio management, financial planning, and advisory services in Abuja, Nigeria. Secure your financial future with expert guidance.">
+    <meta name="keywords" content="investment company, wealth management, financial planning, portfolio management, Abuja, Nigeria, Riversand">
+    <meta name="author" content="Riversand Investment Company">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://widowmaker101.github.io/riversandinvestmentcompany-website/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Riversand Investment Company | Wealth Management in Abuja">
+    <meta property="og:description" content="Expert financial planning and investment services in Nigeria. Grow your wealth with confidence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://widowmaker101.github.io/riversandinvestmentcompany-website/">
+    <meta property="og:image" content="https://source.unsplash.com/random/1200x630/?finance,abuja">
+    <meta property="og:site_name" content="Riversand Investment Company">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Riversand Investment Company | Abuja, Nigeria">
+    <meta name="twitter:description" content="Secure your financial future with expert wealth management.">
+    <meta name="twitter:image" content="https://source.unsplash.com/random/1200x630/?finance,abuja">
+    <meta name="twitter:site" content="@riversandinvest"> <!-- Update if you have Twitter -->
+
+    <!-- Favicon (optional - add later) -->
+    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Riversand Investment Company",
+      "description": "Professional wealth management and financial advisory services in Abuja, Nigeria.",
+      "url": "https://widowmaker101.github.io/riversandinvestmentcompany-website/",
+      "logo": "https://source.unsplash.com/random/500x500/?finance,logo",
+      "image": "https://source.unsplash.com/random/1200x630/?finance,abuja",
+      "telephone": "+234-XXX-XXX-XXXX",
+      "email": "info@riversandinvestmentcompany.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Novare Central Offices, 502 Dalaba Street",
+        "addressLocality": "Wuse Zone 5",
+        "addressRegion": "Abuja",
+        "postalCode": "",
+        "addressCountry": "NG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "9.0765",
+        "longitude": "7.3986"
+      },
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "info@riversandinvestmentcompany.com"
+      },
+      "sameAs": [
+        "https://twitter.com/riversandinvest",
+        "https://linkedin.com/company/riversand-investment"
+      ]
+    }
+    </script>
+
+    <!-- Styles -->
     <style>
         :root {
             --primary: #1E3A8A;
@@ -42,7 +108,6 @@
             z-index: 1000; 
             transition: background 0.3s ease;
         }
-        [data-theme="dark"] header { background: var(--neutral); }
         nav { max-width: 1200px; margin: 0 auto; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
         nav ul { display: flex; list-style: none; gap: 2rem; align-items: center; }
         nav a { text-decoration: none; color: var(--primary); font-weight: 600; transition: color 0.3s; }
@@ -50,7 +115,7 @@
         .theme-toggle { background: none; border: 1px solid var(--primary); color: var(--primary); padding: 0.5rem; border-radius: 0.25rem; cursor: pointer; font-size: 1rem; }
         .theme-toggle:hover { background: var(--primary); color: var(--white); }
         .hero { 
-            background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)), url('https://source.unsplash.com/random/1920x1080/?finance,rivers') center/cover; 
+            background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)), url('https://source.unsplash.com/random/1920x1080/?finance,abuja') center/cover; 
             height: 100vh; 
             display: flex; 
             align-items: center; 
@@ -78,7 +143,7 @@
         }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(16,185,129,0.7); } 70% { box-shadow: 0 0 0 10px rgba(16,185,129,0); } 100% { box-shadow: 0 0 0 0 rgba(16,185,129,0); } }
         .btn:hover { background: #059669; transform: scale(1.05); }
-        section { 
+        main section { 
             padding: 5rem 2rem; 
             max-width: 1200px; 
             margin: 0 auto; 
@@ -86,7 +151,7 @@
             transform: translateY(20px); 
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        section.animate { opacity: 1; transform: translateY(0); }
+        main section.animate { opacity: 1; transform: translateY(0); }
         #about, #services { background: var(--white); }
         [data-theme="dark"] #about, [data-theme="dark"] #services { background: var(--neutral); }
         #contact { background: var(--neutral); }
@@ -147,62 +212,66 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">🌙</button></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark Mode">Dark Mode</button></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div>
-            <h1>Navigate Wealth with Confidence</h1>
-            <p>At Riversand Investment Company, we blend strategic insight with steady growth—like a river carving its path.</p>
-            <a href="#services" class="btn">Explore Services</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Founded in 2020, Riversand Investment Company specializes in personalized wealth management. Our team of certified advisors helps clients achieve long-term financial security through diversified portfolios and risk-aware strategies. With a focus on sustainability and innovation, we're committed to your success.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Portfolio Management</h3>
-                <p>Tailored investment portfolios designed for your goals, balancing risk and reward.</p>
+    <main>
+        <section id="home" class="hero">
+            <div>
+                <h1>Navigate Wealth with Confidence</h1>
+                <p>At Riversand Investment Company, we blend strategic insight with steady growth—like a river carving its path.</p>
+                <a href="#services" class="btn">Explore Services</a>
             </div>
-            <div class="service-card">
-                <h3>Financial Planning</h3>
-                <p>Comprehensive retirement, estate, and tax planning to secure your future.</p>
-            </div>
-            <div class="service-card">
-                <h3>Advisory Consulting</h3>
-                <p>Expert guidance on market trends, mergers, and sustainable investing.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required aria-label="Name">
-            <input type="email" name="email" placeholder="Your Email" required aria-label="Email">
-            <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <h3>Our Details</h3>
-            <p><strong>Email:</strong> <a href="mailto:info@riversandinvestmentcompany.com">info@riversandinvestmentcompany.com</a></p>
-            <p><strong>Address:</strong> NOVARE CENTRAL OFFICES - 502 DALABA STREET, WUSE ZONE 5, ABUJA, NIGERIA</p>
-        </div>
-        <p style="text-align: center; font-size: 0.9rem; margin-top: 1rem; color: #6B7280;">
-            Form not working? Get your free ID at <a href="https://formspree.io" target="_blank">formspree.io</a>
-        </p>
-    </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">Founded in 2020, Riversand Investment Company specializes in personalized wealth management. Our team of certified advisors helps clients achieve long-term financial security through diversified portfolios and risk-aware strategies. With a focus on sustainability and innovation, we're committed to your success.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3>Portfolio Management</h3>
+                    <p>Tailored investment portfolios designed for your goals, balancing risk and reward.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Financial Planning</h3>
+                    <p>Comprehensive retirement, estate, and tax planning to secure your future.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Advisory Consulting</h3>
+                    <p>Expert guidance on market trends, mergers, and sustainable investing.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required aria-label="Name">
+                <input type="email" name="email" placeholder="Your Email" required aria-label="Email">
+                <textarea name="message" rows="5" placeholder="Your Message" required aria-label="Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Our Office</h3>
+                <address>
+                    <p><strong>Email:</strong> <a href="mailto:info@riversandinvestmentcompany.com">info@riversandinvestmentcompany.com</a></p>
+                    <p><strong>Address:</strong> NOVARE CENTRAL OFFICES - 502 DALABA STREET, WUSE ZONE 5, ABUJA, NIGERIA</p>
+                </address>
+            </div>
+            <p style="text-align: center; font-size: 0.9rem; margin-top: 1rem; color: #6B7280;">
+                Form not working? Get your free ID at <a href="https://formspree.io" target="_blank">formspree.io</a>
+            </p>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Riversand Investment Company. All rights reserved. | <a href="#" style="color: var(--white);">Privacy Policy</a></p>
+        <p>© 2025 Riversand Investment Company. All rights reserved. | <a href="#" style="color: var(--white);">Privacy Policy</a></p>
     </footer>
 
     <script>
@@ -214,29 +283,26 @@
             });
         });
 
-        // Dark mode toggle
+        // Dark mode
         function toggleTheme() {
             const body = document.body;
-            const currentTheme = body.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            const current = body.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? 'light' : 'dark';
             body.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
         }
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.body.setAttribute('data-theme', savedTheme);
-        document.querySelector('.theme-toggle').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        const saved = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', saved);
+        document.querySelector('.theme-toggle').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
 
-        // Fade-in animations on scroll
+        // Fade-in on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('animate');
             });
         });
-        document.querySelectorAll('section').forEach(section => observer.observe(section));
+        document.querySelectorAll('main section').forEach(s => observer.observe(s));
     </script>
 </body>
 </html>
