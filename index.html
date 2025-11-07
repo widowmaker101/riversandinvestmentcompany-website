@@ -518,5 +518,30 @@
             gtag('event', 'form_submit', { form: 'contact' });
         });
     </script>
+<a href="https://wa.me/2347030176297?text=Hi%20Riversand%2C%20I%20want%20to%20discuss%20investment%20opportunities" 
+   style="position:fixed;bottom:20px;right:20px;z-index:1000;" 
+   target="_blank"
+   id="whatsapp-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       width="50" height="50" alt="Chat on WhatsApp"
+       style="border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.2);transition:transform 0.3s;">
+</a>
+
+<script>
+  // Hover pulse
+  const waBtn = document.getElementById('whatsapp-btn');
+  if (waBtn) {
+    waBtn.addEventListener('mouseenter', () => waBtn.style.transform = 'scale(1.1)');
+    waBtn.addEventListener('mouseleave', () => waBtn.style.transform = 'scale(1)');
+    
+    // GA4 tracking
+    waBtn.addEventListener('click', () => {
+      gtag('event', 'whatsapp_click', { 
+        location: 'floating_button',
+        phone: '+2347030176297'
+      });
+    });
+  }
+</script>
 </body>
 </html>
