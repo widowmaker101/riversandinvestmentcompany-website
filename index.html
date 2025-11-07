@@ -273,6 +273,31 @@
             .services-grid { grid-template-columns: repeat(3, 1fr); }
         }
     </style>
+ <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK73GSWV3Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZK73GSWV3Z', {
+      page_title: document.title,
+      page_location: window.location.href
+    });
+
+    // Track dark mode toggle
+    const originalToggle = toggleTheme;
+    toggleTheme = function() {
+      originalToggle();
+      gtag('event', 'theme_toggle', { 
+        theme: document.body.getAttribute('data-theme') 
+      });
+    };
+
+    // Track contact form submit
+    document.querySelector('form')?.addEventListener('submit', () => {
+      gtag('event', 'form_submit', { form: 'contact' });
+    });
+  </script>
 </head>
 <body data-theme="light">
     <header>
