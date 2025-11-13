@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Riversand Investment Company</title>
-  <meta name="description" content="Insights on venture capital, private equity, and wealth management in Nigeria.">
+  <meta name="description" content="Expert insights on venture capital, private equity, wealth management, and startup growth in Nigeria.">
   <link rel="canonical" href="https://riversandinvestmentcompany.com/blog/">
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="../favicon.ico">
@@ -14,7 +14,16 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-ZK73GSWV3Z');
+    gtag('event', 'page_view', { page_title: 'Blog Home' });
   </script>
+  <style>
+    .blog-grid { display: grid; gap: 2rem; max-width: 900px; margin: 2rem auto; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .post-card { background: var(--white); padding: 1.5rem; border-radius: 0.75rem; box-shadow: var(--shadow); text-decoration: none; }
+    .post-card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+    .post-meta { font-size: 0.85rem; color: #6B7280; margin-bottom: 0.75rem; }
+    .post-card p { color: #374151; }
+    .read-more { color: var(--accent); font-weight: 600; }
+  </style>
 </head>
 <body data-theme="light">
   <header>
@@ -33,32 +42,34 @@
     </nav>
   </header>
 
-  <main style="padding:6rem 1.5rem 4rem;text-align:center;">
-    <h1>Riversand Blog</h1>
-    <p style="max-width:700px;margin:2rem auto;color:#6B7280;">
-      Expert insights on <strong>venture capital</strong>, <strong>private equity</strong>, and <strong>wealth growth</strong> in Nigeria.
+  <main style="padding:6rem 1.5rem 4rem;">
+    <h1 style="text-align:center;margin-bottom:1.5rem;">Riversand Blog</h1>
+    <p style="text-align:center;max-width:700px;margin:0 auto 3rem;color:#6B7280;">
+      Insights from a <strong>venture capital and private equity firm</strong> investing in Nigeria’s future.
     </p>
 
-    <div style="display:grid;gap:2rem;max-width:800px;margin:0 auto;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
-      <a href="2025-11-10-naira-volatility.html" style="background:white;padding:1.5rem;border-radius:0.75rem;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-        <h3 style="color:#1E3A8A;margin-bottom:0.5rem;">Naira Volatility 2025–2026</h3>
-        <p style="color:#6B7280;font-size:0.9rem;">Nov 10 • 10 min</p>
-        <p>Citibank: ₦1,650–1,700 by mid-2026. 5 hedging strategies.</p>
+    <div class="blog-grid">
+      <a href="2025-11-10-naira-volatility.html" class="post-card">
+        <h3>How to Protect Your Portfolio from Naira Volatility in 2025 & 2026</h3>
+        <div class="post-meta">November 10, 2025 • 10 min read • Market Insights</div>
+        <p>Citibank forecasts ₦1,650–1,700/USD by mid-2026. Learn 5 proven hedging strategies for investors and startups.</p>
       </a>
-      <a href="2025-11-05-client-success.html" style="background:white;padding:1.5rem;border-radius:0.75rem;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-        <h3 style="color:#1E3A8A;margin-bottom:0.5rem;">42% Growth Case Study</h3>
-        <p style="color:#6B7280;font-size:0.9rem;">Nov 5 • 7 min</p>
-        <p>From ₦50M to ₦71M in 3 years.</p>
+
+      <a href="2025-11-05-client-success.html" class="post-card">
+        <h3>How We Grew a Client’s Portfolio 42% in 3 Years</h3>
+        <div class="post-meta">November 5, 2025 • 7 min read • Client Story</div>
+        <p>A real case study from our Abuja office — from ₦50M to ₦71M through disciplined VC-style allocation.</p>
       </a>
-      <a href="2025-11-01-retirement-tips.html" style="background:white;padding:1.5rem;border-radius:0.75rem;text-decoration:none;box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-        <h3 style="color:#1E3A8A;margin-bottom:0.5rem;">5 Retirement Mistakes</h3>
-        <p style="color:#6B7280;font-size:0.9rem;">Nov 1 • 9 min</p>
-        <p>Avoid starting late and inflation traps.</p>
+
+      <a href="2025-11-01-retirement-tips.html" class="post-card">
+        <h3>5 Retirement Mistakes Nigerians Make (And How to Avoid Them)</h3>
+        <div class="post-meta">November 1, 2025 • 9 min read • Financial Tips</div>
+        <p>70% of Nigerians over 55 lack savings. Avoid starting late, inflation traps, and over-reliance on family.</p>
       </a>
     </div>
   </main>
 
-  <footer style="background:#1E3A8A;color:white;text-align:center;padding:2rem;">
+  <footer style="background:var(--primary);color:white;text-align:center;padding:2rem;">
     <p>© 2016–2025 Riversand Investment Company. All rights reserved.</p>
   </footer>
 
