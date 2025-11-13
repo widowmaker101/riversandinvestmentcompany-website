@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>We Invest in Founders | Riversand VC/PE</title>
-  <meta name="description" content="Riversand invests in early-stage, growth-focused Nigerian startups. Seed to Series A.">
+  <title>Pitch Your Startup | Riversand VC/PE</title>
+  <meta name="description" content="Riversand invests ₦50M–₦500M in early-stage Nigerian startups. Submit your pitch.">
   <link rel="canonical" href="https://riversandinvestmentcompany.com/invest/">
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="../favicon.ico">
@@ -14,8 +14,48 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-ZK73GSWV3Z');
-    gtag('event', 'page_view', { page_title: 'Invest Page' });
+    gtag('event', 'page_view', { page_title: 'Pitch Page' });
   </script>
+  <script>
+    function submitPitch() {
+      const form = document.getElementById('pitch-form');
+      const data = new FormData(form);
+      const email = data.get('email');
+      const name = data.get('name');
+      const company = data.get('company');
+      const stage = data.get('stage');
+      const amount = data.get('amount');
+      const deck = data.get('deck');
+
+      if (!email.includes('@') || !name || !company) {
+        alert('Please fill all required fields.');
+        return;
+      }
+
+      // GA4 Event
+      gtag('event', 'pitch_submit', {
+        company: company,
+        stage: stage,
+        amount: amount
+      });
+
+      // Send via EmailJS (free tier)
+      emailjs.send("service_abc123", "template_pitch", {
+        from_name: name,
+        company: company,
+        email: email,
+        stage: stage,
+        amount: amount,
+        deck_url: deck
+      }).then(() => {
+        document.getElementById('pitch-form').innerHTML = '<p style="color:green;text-align:center;">Pitch received! We’ll reply within 48 hours.</p>';
+      }).catch(() => {
+        alert('Error sending pitch. Email us directly: contact@riversandinvestmentcompany.com');
+      });
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>emailjs.init("YOUR_PUBLIC_KEY");</script>
 </head>
 <body data-theme="light">
   <header>
@@ -34,31 +74,33 @@
     </nav>
   </header>
 
-  <main style="padding:6rem 1.5rem 4rem;text-align:center;">
-    <h1>We Invest in <span style="color:var(--accent);">Nigeria’s Future</span></h1>
-    <p style="max-width:700px;margin:2rem auto;font-size:1.1rem;">
-      Riversand is a <strong>venture capital and private equity firm</strong> actively deploying capital into <strong>early-stage and growth-focused companies</strong> with unique, scalable models.
+  <main style="padding:6rem 1.5rem 4rem;max-width:800px;margin:0 auto;">
+    <h1 style="text-align:center;">We Invest in <span style="color:var(--accent);">Founders</span></h1>
+    <p style="text-align:center;margin:2rem 0;font-size:1.1rem;">
+      Riversand is a <strong>venture capital and private equity firm</strong> deploying <strong>₦50M–₦500M</strong> into <strong>early-stage, growth-focused Nigerian startups</strong>.
     </p>
 
-    <div style="display:grid;gap:2rem;max-width:800px;margin:3rem auto;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));">
-      <div style="background:white;padding:1.5rem;border-radius:0.75rem;box-shadow:var(--shadow);">
-        <h3>Seed to Series A</h3>
-        <p>₦50M – ₦500M investments</p>
-      </div>
-      <div style="background:white;padding:1.5rem;border-radius:0.75rem;box-shadow:var(--shadow);">
-        <h3>Focus Sectors</h3>
-        <p>FinTech • AgriTech • HealthTech • EdTech • Clean Energy</p>
-      </div>
-      <div style="background:white;padding:1.5rem;border-radius:0.75rem;box-shadow:var(--shadow);">
-        <h3>Acquisitions</h3>
-        <p>Full or partial buyouts of profitable, unique businesses</p>
-      </div>
+    <div style="background:white;padding:2rem;border-radius:0.75rem;box-shadow:var(--shadow);margin:3rem 0;">
+      <h2 style="text-align:center;margin-bottom:1.5rem;">Submit Your Pitch</h2>
+      <form id="pitch-form" onsubmit="event.preventDefault(); submitPitch();" style="display:grid;gap:1rem;">
+        <input type="text" name="name" placeholder="Founder Name *" required style="padding:0.75rem;border:1px solid #D1D5DB;border-radius:0.5rem;">
+        <input type="email" name="email" placeholder="Email *" required style="padding:0.75rem;border:1px solid #D1D5DB;border-radius:0.5rem;">
+        <input type="text" name="company" placeholder="Company Name *" required style="padding:0.75rem;border:1px solid #D1D5DB;border-radius:0.5rem;">
+        <select name="stage" style="padding:0.75rem;border:1px solid #D1D5DB;border-radius:0.5rem;">
+          <option value="">Stage *</option>
+          <option>Pre-Seed</option>
+          <option>Seed</option>
+          <option>Series A</option>
+        </select>
+        <input type="text" name="amount" placeholder="Funding Ask (₦)" style="padding:0.75rem;border:1px solid #D1D5DB;border-radius:0.5rem;">
+        <input type="url" name="deck" placeholder="Pitch Deck URL (Google Drive, etc.)" style="padding:0.75rem;border:1px solid #D1D5DB;border-radius:0.5rem;">
+        <input type="text" name="honeypot" style="display:none;">
+        <button type="submit" style="background:var(--accent);color:white;padding:0.75rem;border:none;border-radius:0.5rem;font-weight:600;cursor:pointer;">Submit Pitch</button>
+      </form>
     </div>
 
-    <div style="background:var(--accent);color:white;padding:2rem;border-radius:0.75rem;max-width:600px;margin:3rem auto;">
-      <h2>Pitch Your Startup</h2>
-      <p>Tell us about your vision. We respond within 48 hours.</p>
-      <a href="/#contact" class="btn-primary" style="display:inline-block;margin-top:1rem;">Submit Pitch</a>
+    <div style="text-align:center;margin:3rem 0;">
+      <p><strong>Focus Sectors:</strong> FinTech • AgriTech • HealthTech • EdTech • Clean Energy • Consumer</p>
     </div>
   </main>
 
@@ -69,16 +111,16 @@
   <script>
     function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
     function toggleTheme() {
-      const body = document.body;
-      const current = body.getAttribute('data-theme');
-      const newTheme = current === 'dark' ? 'light' : 'dark';
-      body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+      const b = document.body;
+      const c = b.getAttribute('data-theme');
+      const n = c === 'dark' ? 'light' : 'dark';
+      b.setAttribute('data-theme', n);
+      localStorage.setItem('theme', n);
+      document.querySelector('.theme-toggle').textContent = n === 'dark' ? 'Light Mode' : 'Dark Mode';
     }
-    const saved = localStorage.getItem('theme') || 'light';
-    document.body.setAttribute('data-theme', saved);
-    document.querySelector('.theme-toggle').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+    const s = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', s);
+    document.querySelector('.theme-toggle').textContent = s === 'dark' ? 'Light Mode' : 'Dark Mode';
   </script>
 </body>
 </html>
