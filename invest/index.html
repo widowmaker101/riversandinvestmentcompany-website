@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pitch Your Startup | Riversand VC</title>
-  <meta name="description" content="Submit your startup pitch. We invest ₦50M–₦500M in early-stage Nigerian companies.">
+  <meta name="description" content="Submit your startup pitch. We invest ₦50M–₦500M in early-stage companies.">
   <link rel="canonical" href="https://riversandinvestmentcompany.com/invest/">
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" href="../favicon.ico">
@@ -14,11 +14,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-ZK73GSWV3Z');
-  </script>
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){ emailjs.init("YOUR_PUBLIC_KEY"); })();
   </script>
 </head>
 <body data-theme="light">
@@ -41,12 +36,12 @@
   <main style="padding:6rem 1.5rem 4rem;max-width:800px;margin:0 auto;">
     <h1 style="text-align:center;">Pitch to Riversand</h1>
     <p style="text-align:center;margin:2rem 0 3rem;color:var(--gray);">
-      We invest <strong>₦50M–₦500M</strong> in <strong>early-stage Nigerian startups</strong> with traction and vision.
+      We invest <strong>₦50M–₦500M</strong> in <strong>early-stage Nigerian startups</strong>.
     </p>
 
-    <form id="pitchForm" style="display:grid;gap:1.2rem;background:white;padding:2rem;border-radius:0.75rem;box-shadow:var(--shadow);">
+    <form action="https://formspree.io/f/mananvnn" method="POST" id="pitchForm" style="display:grid;gap:1.2rem;background:white;padding:2rem;border-radius:0.75rem;box-shadow:var(--shadow);">
       <input type="text" name="name" placeholder="Founder Name *" required>
-      <input type="email" name="email" placeholder="Email *" required>
+      <input type="email" name="_replyto" placeholder="Email *" required>
       <input type="text" name="company" placeholder="Company Name *" required>
       <select name="stage" required>
         <option value="">Stage *</option>
@@ -55,9 +50,11 @@
         <option>Series A</option>
       </select>
       <input type="text" name="amount" placeholder="Funding Ask (e.g. ₦150M)" required>
-      <input type="url" name="deck" placeholder="Pitch Deck URL (Google Drive, etc.)" required>
-      <textarea name="message" rows="4" placeholder="One-sentence summary of your business"></textarea>
-      <input type="text" name="honeypot" style="display:none;">
+      <input type="url" name="deck" placeholder="Pitch Deck URL" required>
+      <textarea name="message" rows="4" placeholder="One-sentence summary"></textarea>
+      <input type="text" name="_honeypot" style="display:none;">
+      <input type="hidden" name="_subject" value="New Pitch Submission">
+      <input type="hidden" name="_next" value="https://riversandinvestmentcompany.com/invest/?success=true">
       <button type="submit" class="btn btn-primary" style="justify-self:start;">
         Submit Pitch
       </button>
@@ -86,48 +83,24 @@
     document.body.setAttribute('data-theme', s);
     document.querySelector('.theme-toggle').textContent = s === 'dark' ? 'Light Mode' : 'Dark Mode';
 
-    // PITCH FORM SUBMISSION
-    document.getElementById('pitchForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const status = document.getElementById('status');
-      const btn = this.querySelector('button');
-      const honeypot = this.honeypot.value;
+    // FORM SUBMISSION + GA4
+    const form = document.getElementById('pitchForm');
+    form.addEventListener('submit', function() {
+      const company = form.company.value;
+      const stage = form.stage.value;
+      const amount = form.amount.value;
 
-      if (honeypot) return; // Bot
-
-      btn.disabled = true;
-      btn.textContent = 'Sending...';
-
-      const templateParams = {
-        from_name: this.name.value,
-        from_email: this.email.value,
-        company: this.company.value,
-        stage: this.stage.value,
-        amount: this.amount.value,
-        deck: this.deck.value,
-        message: this.message.value || 'No message'
-      };
-
-      // GA4 Event
       gtag('event', 'pitch_submitted', {
-        company: templateParams.company,
-        stage: templateParams.stage,
-        amount: templateParams.amount
+        company: company,
+        stage: stage,
+        amount: amount
       });
-
-      emailjs.send('service_pitch123', 'template_pitch', templateParams)
-        .then(() => {
-          status.innerHTML = '<p style="color:green;">Pitch received! We’ll reply within 48 hours.</p>';
-          this.reset();
-        })
-        .catch(() => {
-          status.innerHTML = '<p style="color:red;">Error. Email us: <a href="mailto:info@riversandinvestmentcompany.com">info@riversandinvestmentcompany.com</a></p>';
-        })
-        .finally(() => {
-          btn.disabled = false;
-          btn.textContent = 'Submit Pitch';
-        });
     });
+
+    // Success message
+    if (window.location.search.includes('success=true')) {
+      document.getElementById('status').innerHTML = '<p style="color:green;margin-top:1rem;">Pitch received! We’ll reply within 1 hours.</p>';
+    }
   </script>
 </body>
 </html>
