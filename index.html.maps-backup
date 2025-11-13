@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Core Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riversand Investment Company | Wealth Management in Abuja</title>
+    <meta name="description" content="Expert financial planning and investment services in Nigeria. Grow your wealth with confidence.">
+    <meta name="keywords" content="investment company, wealth management, financial planning, Abuja, Nigeria, Riversand">
+    <meta name="author" content="Riversand Investment Company">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://widowmaker101.github.io/riversandinvestmentcompany-website/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Riversand Investment Company | Abuja">
+    <meta property="og:description" content="Secure your financial future with expert wealth management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://widowmaker101.github.io/riversandinvestmentcompany-website/">
+    <meta property="og:image" content="https://source.unsplash.com/random/1200x630/?finance,abuja">
+    <meta property="og:site_name" content="Riversand Investment Company">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Riversand Investment Company | Abuja">
+    <meta name="twitter:description" content="Expert wealth management in Nigeria.">
+    <meta name="twitter:image" content="https://source.unsplash.com/random/1200x630/?finance,abuja">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Riversand Investment Company",
+      "url": "https://widowmaker101.github.io/riversandinvestmentcompany-website/",
+      "logo": "/logo.png",
+      "email": "info@riversandinvestmentcompany.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Novare Central Offices, 502 Dalaba Street",
+        "addressLocality": "Wuse Zone 5",
+        "addressRegion": "Abuja",
+        "addressCountry": "NG"
+      }
+    }
+    </script>
+
+    <!-- Styles -->
+    <style>
+        :root {
+            --primary: #1E3A8A;
+            --accent: #10B981;
+            --neutral: #F3F4F6;
+            --text: #111827;
+            --white: #FFFFFF;
+            --shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        [data-theme="dark"] {
+            --primary: #60A5FA;
+            --accent: #34D399;
+            --neutral: #1F2937;
+            --text: #F9FAFB;
+            --white: #111827;
+            --shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text); 
+            background: var(--neutral); 
+            transition: all 0.3s ease;
+            overflow-x: hidden;
+        }
+        header { 
+            background: var(--white); 
+            box-shadow: var(--shadow); 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        nav { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0.75rem 1rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .logo { height: 36px; width: auto; transition: transform 0.3s; }
+        .logo:hover { transform: scale(1.05); }
+
+        /* Hamburger Menu */
+        .nav-links { 
+            display: flex; 
+            gap: 1.5rem; 
+            align-items: center; 
+        }
+        .nav-links a, .nav-links button { 
+            text-decoration: none; 
+            color: var(--primary); 
+            font-weight: 600; 
+            font-size: 0.95rem; 
+        }
+        .theme-toggle { 
+            background: none; 
+            border: 1px solid var(--primary); 
+            color: var(--primary); 
+            padding: 0.4rem 0.6rem; 
+            border-radius: 0.25rem; 
+            cursor: pointer; 
+            font-size: 0.9rem; 
+        }
+        .hamburger { 
+            display: none; 
+            flex-direction: column; 
+            cursor: pointer; 
+            gap: 4px; 
+        }
+        .hamburger span { 
+            width: 25px; 
+            height: 3px; 
+            background: var(--primary); 
+            border-radius: 2px; 
+            transition: 0.3s; 
+        }
+
+        .hero { 
+            background: linear-gradient(rgba(30,58,138,0.85), rgba(30,58,138,0.85)), url('https://source.unsplash.com/random/1920x1080/?finance,abuja') center/cover; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            color: var(--white); 
+            padding: 0 1.5rem; 
+            margin-top: 60px; 
+        }
+        .hero h1 { 
+            font-size: clamp(2rem, 8vw, 3.5rem); 
+            margin-bottom: 1rem; 
+            font-weight: 700; 
+        }
+        .hero p { 
+            font-size: clamp(1rem, 4vw, 1.25rem); 
+            margin-bottom: 1.5rem; 
+            max-width: 90%; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+        .btn { 
+            background: var(--accent); 
+            color: var(--white); 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 0.5rem; 
+            font-weight: 600; 
+            transition: all 0.3s; 
+            display: inline-block; 
+            font-size: 1rem; 
+            min-height: 44px; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .btn:hover { background: #059669; transform: translateY(-2px); }
+
+        main section { 
+            padding: 4rem 1.5rem; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        main section.animate { opacity: 1; transform: translateY(0); }
+
+        h2 { 
+            font-size: clamp(1.8rem, 6vw, 2.5rem); 
+            text-align: center; 
+            margin-bottom: 2.5rem; 
+            color: var(--primary); 
+        }
+
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 1.5rem; 
+        }
+        .service-card { 
+            background: var(--white); 
+            padding: 1.75rem; 
+            border-radius: 0.75rem; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+            transition: transform 0.3s; 
+        }
+        .service-card:hover { transform: translateY(-5px); }
+
+        form { 
+            display: grid; 
+            gap: 1rem; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        input, textarea, button { 
+            padding: 1rem; 
+            border-radius: 0.5rem; 
+            font-family: inherit; 
+            font-size: 1rem; 
+            min-height: 48px; 
+        }
+        input, textarea { 
+            border: 1px solid #D1D5DB; 
+            background: var(--white); 
+            color: var(--text); 
+        }
+        button { 
+            background: var(--primary); 
+            color: var(--white); 
+            border: none; 
+            font-weight: 600; 
+            cursor: pointer; 
+        }
+
+        .contact-info { 
+            text-align: center; 
+            margin-top: 2rem; 
+            font-size: 0.95rem; 
+        }
+        .contact-info a { color: var(--accent); text-decoration: none; }
+
+        footer { 
+            background: var(--primary); 
+            color: var(--white); 
+            text-align: center; 
+            padding: 2rem 1rem; 
+            font-size: 0.9rem; 
+        }
+
+        /* Mobile Menu */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { 
+                position: fixed; 
+                top: 60px; 
+                left: -100%; 
+                width: 100%; 
+                background: var(--white); 
+                flex-direction: column; 
+                padding: 1.5rem; 
+                transition: left 0.3s ease; 
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            }
+            .nav-links.active { left: 0; }
+            .nav-links a, .nav-links button { 
+                padding: 0.75rem 0; 
+                text-align: center; 
+                font-size: 1.1rem; 
+            }
+            [data-theme="dark"] .nav-links { background: var(--neutral); }
+        }
+
+        @media (min-width: 769px) {
+            .services-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+ <!-- GOOGLE ANALYTICS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK73GSWV3Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZK73GSWV3Z', {
+      page_title: document.title,
+      page_location: window.location.href
+    });
+
+    // Track dark mode toggle
+    const originalToggle = toggleTheme;
+    toggleTheme = function() {
+      originalToggle();
+      gtag('event', 'theme_toggle', { 
+        theme: document.body.getAttribute('data-theme') 
+      });
+    };
+
+    // Track contact form submit
+    document.querySelector('form')?.addEventListener('submit', () => {
+      gtag('event', 'form_submit', { form: 'contact' });
+    });
+  </script>
+</head>
+<body data-theme="light">
+    <header>
+        <nav>
+            <img src="logo.png" alt="Riversand Investment Company Logo" class="logo">
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div>
+                <h1>Navigate Wealth with Confidence</h1>
+                <p>At Riversand Investment Company, we blend strategic insight with steady growth—like a river carving its path.</p>
+                <a href="#services" class="btn">Explore Services</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                Founded in 2020, Riversand Investment Company specializes in personalized wealth management. Our team helps clients achieve long-term financial security through diversified portfolios and risk-aware strategies.
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <h3>Portfolio Management</h3>
+                    <p>Tailored investment portfolios designed for your goals.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Financial Planning</h3>
+                    <p>Comprehensive retirement, estate, and tax planning.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Advisory Consulting</h3>
+                    <p>Expert guidance on market trends and sustainable investing.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Our Office</h3>
+                <p><strong>Email:</strong> <a href="mailto:info@riversandinvestmentcompany.com">info@riversandinvestmentcompany.com</a></p>
+                <p><strong>Address:</strong> NOVARE CENTRAL OFFICES - 502 DALABA STREET, WUSE ZONE 5, ABUJA, NIGERIA</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Riversand Investment Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Hamburger menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Dark mode
+        function toggleTheme() {
+            const body = document.body;
+            const current = body.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? 'light' : 'dark';
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+        }
+        const saved = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', saved);
+        document.querySelector('.theme-toggle').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('animate');
+            });
+        });
+        document.querySelectorAll('main section').forEach(s => observer.observe(s));
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
