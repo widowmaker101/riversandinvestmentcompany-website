@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Riversand Investment Company</title>
-  <meta name="description" content="Insights on venture capital, private equity, and wealth management in Nigeria."/>
+  <meta name="description" content="Latest insights, investments and market analysis from Riversand VC & PE."/>
+  <link rel="canonical" href="https://riversandinvestmentcompany.com/blog/"/>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../favicon.ico"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK73GSWV3Z"></script>
@@ -15,60 +16,62 @@
     gtag('config', 'G-ZK73GSWV3Z');
   </script>
 </head>
-<body>
+<body data-theme="light">
   <header>
-    <nav>
+    <nav class="container">
       <a href="/"><img src="/logo.png" alt="Riversand" class="logo"></a>
-      <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('active')">Menu</div>
+      <button class="hamburger" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links" id="navLinks">
         <a href="/">Home</a>
         <a href="/#about">About</a>
         <a href="/#services">Services</a>
         <a href="/#contact">Contact</a>
-        <a href="/blog/">Blog</a>
+        <a href="/blog/" class="active">Blog</a>
         <a href="/invest/">Invest</a>
         <a href="/portfolio/">Portfolio</a>
-  
-  
         <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
       </div>
     </nav>
   </header>
 
-  <main style="padding:8rem 1.5rem 6rem;max-width:900px;margin:0 auto;">
-    <h1 style="text-align:center;margin-bottom:2rem;">Riversand Blog</h1>
-    <p style="text-align:center;max-width:700px;margin:0 auto 3rem;color:#6B7280;">
-      Latest insights from a leading venture capital and private equity firm in Abuja.
+  <main class="container" style="padding:9rem 1rem 6rem;">
+    <h1 style="text-align:center;margin-bottom:1rem;font-size:3.2rem;">Riversand Blog</h1>
+    <p style="text-align:center;max-width:720px;margin:0 auto 4rem;color:#64748b;font-size:1.15rem;">
+      Insights, updates and announcements from a leading venture capital & private equity firm in Abuja.
     </p>
 
-    <div style="display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));">
-      <!-- Latest investment announcement -->
-      <a href="2026-01-19-riversand-investments.html" style="background:white;padding:1.75rem;border-radius:0.75rem;box-shadow:0 4px 12px rgba(0,0,0,0.08);text-decoration:none;color:inherit;">
-        <p style="color:#6B7280;font-size:0.9rem;margin-bottom:0.75rem;">January 19, 2026 • Investments</p>
-        <p>Announcing new investments in FlatShareNaija.com, Henleys Analytica, and RelianceHR.</p>
+    <div style="display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));">
+      <!-- Latest post – investment announcement -->
+      <a href="2026-01-19-riversand-investments.html" style="background:white;border-radius:1rem;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);text-decoration:none;color:inherit;transition:all 0.4s;">
+        <div style="padding:1.8rem;">
+          <span style="background:#10b981;color:white;padding:0.35rem 0.9rem;border-radius:999px;font-size:0.8rem;font-weight:600;">Investment Update</span>
+          <h3 style="margin:1rem 0 0.75rem;color:#1e3a8a;font-size:1.6rem;">Riversand Expands Portfolio with Strategic Investments</h3>
+          <p style="color:#64748b;margin-bottom:1rem;font-size:0.95rem;">January 19, 2026</p>
+          <p style="color:#475569;">Announcing new investments in FlatShareNaija.com, Henleys Analytica, and RelianceHR — powering the next wave of Nigerian innovation.</p>
+        </div>
       </a>
 
-      <!-- Older posts (add more cards here in future) -->
-      <a href="2025-11-10-naira-volatility.html" style="background:white;padding:1.75rem;border-radius:0.75rem;box-shadow:0 4px 12px rgba(0,0,0,0.08);text-decoration:none;color:inherit;">
-        <h3 style="color:#1E3A8A;margin-bottom:0.5rem;">Naira Volatility 2025–2026</h3>
-        <p style="color:#6B7280;font-size:0.9rem;margin-bottom:0.75rem;">November 10, 2025 • Market Insights</p>
-        <p>Forecasts and hedging strategies for the coming year.</p>
-      </a>
+      <!-- You can add older posts here in the same format -->
     </div>
   </main>
 
-  <footer style="background:var(--primary);color:white;text-align:center;padding:3rem 1rem;">
-    <p>© 2016–2026 Riversand Investment Company. All rights reserved.</p>
+  <footer style="background:#0f172a;color:white;text-align:center;padding:4rem 1rem 2rem;">
+    <div class="container">
+      <p>© 2016–2025 Riversand Investment Company Limited. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
     function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
     function toggleTheme() {
-      const b = document.body;
-      const t = b.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      b.setAttribute('data-theme', t);
-      localStorage.setItem('theme', t);
-      document.querySelector('.theme-toggle').textContent = t === 'dark' ? 'Light Mode' : 'Dark Mode';
+      const body = document.body;
+      const current = body.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
     }
     const saved = localStorage.getItem('theme') || 'light';
     document.body.setAttribute('data-theme', saved);
