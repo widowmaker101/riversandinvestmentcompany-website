@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog | Riversand Investment Company</title>
-  <meta name="description" content="Latest insights, investments and market analysis from Riversand VC & PE."/>
+  <meta name="description" content="Latest insights, market analysis, and investment updates from Riversand VC & PE."/>
   <link rel="canonical" href="https://riversandinvestmentcompany.com/blog/"/>
   <link rel="stylesheet" href="../style.css"/>
   <link rel="icon" href="../favicon.ico"/>
@@ -15,14 +15,159 @@
     gtag('js', new Date());
     gtag('config', 'G-ZK73GSWV3Z');
   </script>
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --accent: #10B981;
+      --light: #F9FAFB;
+      --gray: #64748B;
+      --dark: #0F172A;
+      --radius: 1rem;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 1.25rem 0;
+    }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo { height: 48px; }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    .hamburger { display: none; cursor: pointer; color: var(--accent); font-size: 1.8rem; }
+
+    main { padding: 9rem 1.5rem 6rem; }
+
+    h1 { font-size: 3.2rem; text-align: center; margin-bottom: 1rem; color: var(--primary); }
+
+    .blog-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .blog-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    }
+
+    .blog-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .blog-content {
+      padding: 1.75rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+
+    .blog-meta {
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .blog-excerpt {
+      color: #475569;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .read-more {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+      .nav-links {
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 8rem 2rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.77,0,0.18,1);
+        z-index: 999;
+      }
+
+      .nav-links.active { transform: translateX(0); }
+    }
+  </style>
 </head>
 <body data-theme="light">
   <header>
     <nav class="container">
       <a href="/"><img src="/logo.png" alt="Riversand" class="logo"></a>
-      <button class="hamburger" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('active')">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" aria-label="Toggle menu">☰</button>
       <div class="nav-links" id="navLinks">
         <a href="/">Home</a>
         <a href="/#about">About</a>
@@ -36,28 +181,18 @@
     </nav>
   </header>
 
-  <main class="container" style="padding:9rem 1rem 6rem;">
-    <h1 style="text-align:center;margin-bottom:1rem;font-size:3.2rem;">Riversand Blog</h1>
-    <p style="text-align:center;max-width:720px;margin:0 auto 4rem;color:#64748b;font-size:1.15rem;">
-      Insights, updates and announcements from a leading venture capital & private equity firm in Abuja.
+  <main class="container">
+    <h1>Riversand Blog</h1>
+    <p style="text-align:center;max-width:720px;margin:0 auto 4rem;color:#64748b;">
+      Latest market insights, investment announcements, and thought leadership from our team.
     </p>
 
-    <div style="display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));">
-      <!-- Latest post – investment announcement -->
-      <a href="2026-01-19-riversand-investments.html" style="background:white;border-radius:1rem;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.08);text-decoration:none;color:inherit;transition:all 0.4s;">
-        <div style="padding:1.8rem;">
-          <span style="background:#10b981;color:white;padding:0.35rem 0.9rem;border-radius:999px;font-size:0.8rem;font-weight:600;">Investment Update</span>
-          <h3 style="margin:1rem 0 0.75rem;color:#1e3a8a;font-size:1.6rem;">Riversand Expands Portfolio with Strategic Investments</h3>
-          <p style="color:#64748b;margin-bottom:1rem;font-size:0.95rem;">January 19, 2026</p>
-          <p style="color:#475569;">Announcing new investments in FlatShareNaija.com, Henleys Analytica, and RelianceHR — powering the next wave of Nigerian innovation.</p>
-        </div>
-      </a>
-
-      <!-- You can add older posts here in the same format -->
+    <div class="blog-grid" id="blogPosts">
+      <!-- Posts will be injected here dynamically -->
     </div>
   </main>
 
-  <footer style="background:#0f172a;color:white;text-align:center;padding:4rem 1rem 2rem;">
+  <footer>
     <div class="container">
       <p>© 2016–2025 Riversand Investment Company Limited. All rights reserved.</p>
     </div>
@@ -66,16 +201,71 @@
   <script>
     function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
     function toggleTheme() {
-      const body = document.body;
-      const current = body.getAttribute('data-theme');
-      const newTheme = current === 'dark' ? 'light' : 'dark';
-      body.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      document.querySelector('.theme-toggle').textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+      const b = document.body;
+      const t = b.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      b.setAttribute('data-theme', t);
+      localStorage.setItem('theme', t);
+      document.querySelector('.theme-toggle').textContent = t === 'dark' ? 'Light Mode' : 'Dark Mode';
     }
     const saved = localStorage.getItem('theme') || 'light';
     document.body.setAttribute('data-theme', saved);
     document.querySelector('.theme-toggle').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
+
+    // Dynamic blog listing
+    const blogContainer = document.getElementById('blogPosts');
+
+    // List of your blog posts (add new ones here when you create them)
+    const posts = [
+      {
+        title: "Riversand Expands Portfolio with Strategic Investments",
+        date: "January 19, 2026",
+        excerpt: "Announcing investments in FlatShareNaija.com, Henleys Analytica, and RelianceHR.",
+        url: "2026-01-19-riversand-investments.html",
+        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800"
+      },
+      {
+        title: "How to Protect Your Portfolio from Naira Volatility in 2025 & 2026",
+        date: "November 10, 2025",
+        excerpt: "Citibank forecasts ₦1,650–1,700/USD. Learn 5 hedging strategies.",
+        url: "2025-11-10-naira-volatility.html",
+        image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800"
+      },
+      {
+        title: "How We Grew a Client’s Portfolio 42% in 3 Years",
+        date: "November 5, 2025",
+        excerpt: "Real case study from our Abuja office.",
+        url: "2025-11-05-client-success.html",
+        image: "https://images.unsplash.com/photo-1551288049-b1f9e8e4f91c?w=800"
+      },
+      {
+        title: "5 Retirement Mistakes Nigerians Make (And How to Avoid Them)",
+        date: "November 1, 2025",
+        excerpt: "Common pitfalls and expert advice for secure retirement planning.",
+        url: "2025-11-01-retirement-tips.html",
+        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800"
+      }
+      // ← Add new posts here in the same format when you create them
+    ];
+
+    // Sort posts by date (newest first)
+    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Render all posts
+    posts.forEach(post => {
+      const card = document.createElement('a');
+      card.href = post.url;
+      card.className = 'blog-card';
+      card.innerHTML = `
+        <div class="blog-image" style="background-image:url('${post.image}')"></div>
+        <div class="blog-content">
+          <h3 class="blog-title">${post.title}</h3>
+          <p class="blog-date">${post.date}</p>
+          <p class="blog-excerpt">${post.excerpt}</p>
+          <span class="read-more">Read more →</span>
+        </div>
+      `;
+      blogContainer.appendChild(card);
+    });
   </script>
 </body>
 </html>
