@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Riversand | VC & PE Firm in Abuja</title>
-  <meta name="description" content="Venture capital and private equity firm investing in early-stage Nigerian startups.">
-  <link rel="canonical" href="https://riversandinvestmentcompany.com/">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Riversand Investment Company | Venture Capital & Private Equity</title>
+  <meta name="description" content="Abuja-based VC & PE firm investing in early-stage, high-growth Nigerian startups."/>
+  <link rel="canonical" href="https://riversandinvestmentcompany.com/"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK73GSWV3Z"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,10 +18,15 @@
   </script>
 </head>
 <body data-theme="light">
-  <nav>
-    <div class="container flex items-center justify-between">
-      <a href="/"><img src="logo.png" alt="Riversand" class="logo"></a>
-      <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('active')">Menu</div>
+  <!-- Mobile-friendly navigation -->
+  <header>
+    <nav class="container">
+      <a href="/" class="logo-link">
+        <img src="logo.png" alt="Riversand" class="logo"/>
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <div class="nav-links" id="navLinks">
         <a href="/">Home</a>
         <a href="/#about">About</a>
@@ -30,67 +35,103 @@
         <a href="/blog/">Blog</a>
         <a href="/invest/">Invest</a>
         <a href="/portfolio/">Portfolio</a>
-
-        <a href="/portfolio/">Portfolio</a>
-
         <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
+  <!-- Hero – big on mobile -->
   <section class="hero">
     <div class="container">
-      <h1 class="fade-in">We Build Wealth Through <span style="color:var(--accent);">Venture Capital</span> & <span style="color:var(--accent);">Private Equity</span></h1>
-      <p class="text-lg fade-in" style="transition-delay:0.2s;">Investing in early-stage, high-growth Nigerian startups. Founded 2016.</p>
-      <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="/#contact" class="btn btn-primary pulse fade-in" style="transition-delay:0.4s;">Get Funded</a>
-        <a href="/invest/" class="btn btn-secondary fade-in" style="transition-delay:0.5s;">We Invest in Founders</a>
+      <h1>We Build <span class="highlight">Unicorns</span> in Nigeria</h1>
+      <p class="lead">Venture capital & private equity firm investing ₦50M–₦500M in early-stage, high-growth startups.</p>
+      <div class="hero-buttons">
+        <a href="/invest/" class="btn btn-primary">Submit Pitch</a>
+        <a href="/portfolio/" class="btn btn-outline">See Portfolio</a>
       </div>
     </div>
   </section>
 
-  <section id="about">
+  <!-- About -->
+  <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title fade-in">About Riversand</h2>
-      <p class="text-center fade-in" style="max-width:800px;margin:0 auto 3rem;transition-delay:0.1s;">
-        We are a <strong>venture capital and private equity firm</strong> in Abuja, deploying <strong>₦50M–₦500M</strong> into <strong>early-stage and growth companies</strong>.
-      </p>
-      <div class="grid md:col-3 gap-8">
-        <div class="card fade-in stagger-1"><div class="text-center"><h3>Seed to Series A</h3><p>Strategic capital for scale.</p></div></div>
-        <div class="card fade-in stagger-2"><div class="text-center"><h3>Active Partnerships</h3><p>Hands-on support.</p></div></div>
-        <div class="card fade-in stagger-3"><div class="text-center"><h3>Exit-Focused</h3><p>Built for acquisitions.</p></div></div>
+      <h2 class="section-title">About Riversand</h2>
+      <div class="grid about-grid">
+        <div class="about-text">
+          <p>We are an <strong>Abuja-based venture capital and private equity firm</strong> focused on early-stage and growth companies with unique, scalable models.</p>
+          <p>Since 2016 we’ve deployed capital across FinTech, PropTech, AI, HR Tech, AgriTech, HealthTech, EdTech and Clean Energy.</p>
+        </div>
+        <div class="about-stats grid stats-grid">
+          <div><strong>50+</strong><span>Startups Funded</span></div>
+          <div><strong>₦500M+</strong><span>Deployed</span></div>
+          <div><strong>42%</strong><span>Avg ROI</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="services" style="background:#F9FAFB;">
+  <!-- Services -->
+  <section id="services" class="section bg-light">
     <div class="container">
-      <h2 class="section-title fade-in">Our Services</h2>
-      <div class="grid md:col-2 lg:col-4 gap-8">
-        <div class="card fade-in stagger-1"><h3>Startup Investments</h3><p>₦50M–₦500M in FinTech, AgriTech.</p></div>
-        <div class="card fade-in stagger-2"><h3>Company Acquisitions</h3><p>Full or partial buyouts.</p></div>
-        <div class="card fade-in stagger-3"><h3>Wealth Management</h3><p>Protect against volatility.</p></div>
-        <div class="card fade-in stagger-4"><h3>Advisory</h3><p>Exit planning & valuation.</p></div>
+      <h2 class="section-title">Our Services</h2>
+      <div class="grid services-grid">
+        <div class="card">
+          <h3>Startup Investments</h3>
+          <p>Seed to Series A funding for high-potential Nigerian startups.</p>
+        </div>
+        <div class="card">
+          <h3>Company Acquisitions</h3>
+          <p>Full or partial buyouts of profitable, unique businesses.</p>
+        </div>
+        <div class="card">
+          <h3>Wealth Management</h3>
+          <p>Portfolio protection against naira volatility & inflation.</p>
+        </div>
+        <div class="card">
+          <h3>Strategic Advisory</h3>
+          <p>Exit planning, valuation, capital raising support.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="container text-center">
-      <h2 class="section-title fade-in">Let’s Build Together</h2>
-      <p class="fade-in" style="transition-delay:0.1s;">Pitch your startup or book a review.</p>
-      <a href="/invest/" class="btn btn-primary pulse fade-in" style="margin-top:1rem;transition-delay:0.2s;">Submit Pitch</a>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Let’s Build the Future Together</h2>
+      <p>Whether you’re a founder seeking capital or an investor looking for opportunities — we’re here.</p>
+      <div class="cta-buttons">
+        <a href="/invest/" class="btn btn-primary">Pitch Your Startup</a>
+        <a href="/#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-     389      <p>© 2016–2025 Riversand Investment Company. All rights reserved.</p>
+      <p>© 2016–2025 Riversand Investment Company Limited. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Theme Toggle
+    // Hamburger menu
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const expanded = navLinks.classList.contains('active');
+      hamburger.setAttribute('aria-expanded', expanded);
+    });
+
+    // Close menu when clicking a link (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Theme toggle
     function toggleTheme() {
       const body = document.body;
       const current = body.getAttribute('data-theme');
@@ -103,21 +144,11 @@
     document.body.setAttribute('data-theme', saved);
     document.querySelector('.theme-toggle').textContent = saved === 'dark' ? 'Light Mode' : 'Dark Mode';
 
-    // Scroll Animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          if (entry.target.classList.contains('fade-in')) {
-            entry.target.classList.add('animate');
-          }
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in, .card, .section-title').forEach(el => {
-      observer.observe(el);
-    });
+    // GA4
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZK73GSWV3Z');
   </script>
 </body>
 </html>
